@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-image: url('https://img.freepik.com/fotos-gratis/plano-de-fundo-da-pintura-de-natureza-morta_23-2149104141.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body:has(.dbba2ddf-664f-49d8-8228-34818bd43a9e) > .dbba2ddf-664f-49d8-8228-34818bd43a9e {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body:has(#cc3d4209-3deb-4ad4-b451-95cf291146aa) > #cc3d4209-3deb-4ad4-b451-95cf291146aa {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#cc3d4209-3deb-4ad4-b451-95cf291146aa li {
+    padding: 10px;
+    background: #f8f8f8;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#cc3d4209-3deb-4ad4-b451-95cf291146aa li:hover {
+    background: #e8e8e8;
+}
+
+#cc3d4209-3deb-4ad4-b451-95cf291146aa li.playing {
+    background: #4CAF50;
+    color: white;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 100px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+#d3275aea-defd-4dfd-af6b-4cf4434453a0 {
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+input[type="range"] {
+    width: 100px;
+    accent-color: #4CAF50;
+}
+
+.volume-icon {
+    font-size: 20px;
+    color: #666;
+}
+
+.playback-controls {
+    display: flex;
+    gap: 10px;
+}
+
+#credits {
+    background-color: #ffff;
+    padding: .367rem;
+    margin-top: .246rem;
+    border-radius: 8px;
+}
+

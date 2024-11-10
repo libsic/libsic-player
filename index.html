@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="libsic production & jlcraftsman"/>
+    <meta name="description" content="A simple MP3 player for you to listen to your music. Don't install anything, just choose the folder and start listening to your album."/>
+    <title>libsic player</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Josefin+Sans:ital,wght@0,100..700;1,100..700&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body style="font-family: 'Josefin Sans','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <div class="dbba2ddf-664f-49d8-8228-34818bd43a9e">
+        <a href="./index.html" style="color: #161616; text-decoration: none; display: flex; align-items: center;">
+            <img src="./favicon.ico" width="100" alt="icon">
+            <h1>
+                libsic player |
+                <span style="font-weight: 400;">The simplest MP3 player</span>
+            </h1>
+        </a>
+        <hr />
+        <input type="file" id="d3275aea-defd-4dfd-af6b-4cf4434453a0" webkitdirectory="webkitdirectory" directory="directory" multiple="multiple" />
+        <div class="controls">
+            <div class="playback-controls">
+                <button id="o816e568-f8e8-49f0-9adf-47b0e38f2808" disabled="disabled">Play</button>
+                <button id="o776e568-f8e8-49f0-9adf-47b0e38f2808" disabled="disabled">Pause</button>
+            </div>
+            <div class="volume-control">
+                <span class="volume-icon">🔊</span>
+                <input type="range" id="volumeControl" min="0" max="100" value="100" />
+                <span id="volumeValue">100%</span>
+            </div>
+        </div>
+        <audio id="hgf120f3-047d-44d4-a1df-8bdb6f99298d"></audio>
+        <ul id="cc3d4209-3deb-4ad4-b451-95cf291146aa"></ul>
+    </div>
+    <div id="credits">
+        <p>Hosted by <a href="https://github.com/libsic" target="_blank" rel="noopener noreferrer">libsic production</a> and jlcraftsman &copy; All rights reserved 2024</p>
+    </div>
+
+    <script src="./assets/scripts/app.js" type="text/javascript" defer="defer"></script>
+</body>
+
+</html>
