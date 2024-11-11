@@ -16,11 +16,11 @@ volumeControl.addEventListener('input', (e) => {
     volumeValue.textContent = `${Math.round(volume * 100)}%`;
 
     if (volume === 0) {
-        volumeIcon.textContent = '🔇';
+        volumeIcon.innerHTML = '<i class="ri-volume-mute-fill"></i>';
     } else if (volume < 0.5) {
-        volumeIcon.textContent = '🔉';
+        volumeIcon.innerHTML = '<i class="ri-volume-down-fill"></i>';
     } else {
-        volumeIcon.textContent = '🔊';
+        volumeIcon.innerHTML = '<i class="ri-volume-up-fill"></i>';
     }
 });
 
@@ -43,17 +43,34 @@ pauseButton.addEventListener('click', () => {
     }
 });
 
+const customButton = document.getElementById('customButton');
+const folderNameDisplay = document.getElementById('folderName');
+
+customButton.addEventListener('click', () => {
+    folderInput.click(); // Simula o clique no input escondido
+});
+
 folderInput.addEventListener('change', (e) => {
     playlist.innerHTML = '';
     songs = [];
 
     const files = Array.from(e.target.files).filter(file => file.type === 'audio/mpeg');
 
+    if (files.length > 0) {
+        // Obtém o caminho relativo do primeiro arquivo
+        const filePath = files[0].webkitRelativePath;
+        
+        // Extrai o nome da pasta do caminho relativo
+        const folderName = filePath.split('/')[0];
+        document.querySelector('#album-playing-now').textContent = ` ${folderName}`;
+    }
+
     files.forEach((file, index) => {
         songs.push(URL.createObjectURL(file));
 
         const li = document.createElement('li');
-        li.textContent = file.name;
+        li.innerHTML = `<i class="ri-file-music-fill"></i> ${file.name}`;
+        li.style.listStyle = "none";
         li.onclick = () => {
             currentSongIndex = index;
             playSong();
@@ -91,3 +108,4 @@ function updatePlayPauseButtons(isPaused) {
     playButton.disabled = !isPaused;
     pauseButton.disabled = isPaused;
 }
+

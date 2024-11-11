@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Josefin+Sans:ital,wght@0,100..700;1,100..700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body style="font-family: 'Josefin Sans','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
@@ -20,25 +21,36 @@
             <img src="./favicon.ico" width="100" alt="icon">
             <h1>
                 libsic player |
-                <span style="font-weight: 400;">The simplest MP3 player</span>
+                <span style="font-weight: 400;">The player to listen to albums</span>
             </h1>
         </a>
         <span>Select the folder and start playing your album</span>
         <hr />
-        <input type="file" id="d3275aea-defd-4dfd-af6b-4cf4434453a0" webkitdirectory="webkitdirectory" directory="directory" multiple="multiple" />
+        <input type="file" id="d3275aea-defd-4dfd-af6b-4cf4434453a0" webkitdirectory="webkitdirectory" directory="directory" multiple="multiple" style="display: none;" />
+        <button id="customButton" style="font-size: .960rem; font-weight: 900;">
+            <i class="ri-folder-line"></i>
+            Select album
+        </button>
+        <h3>The album of the moment is<span id="album-playing-now">...</span></h3>
         <div class="controls">
             <div class="playback-controls">
-                <button id="o816e568-f8e8-49f0-9adf-47b0e38f2808" disabled="disabled">Play</button>
-                <button id="o776e568-f8e8-49f0-9adf-47b0e38f2808" disabled="disabled">Pause</button>
+                <button id="o816e568-f8e8-49f0-9adf-47b0e38f2808" disabled="disabled">
+                    <i class="ri-play-fill"></i>
+                    Play
+                </button>
+                <button id="o776e568-f8e8-49f0-9adf-47b0e38f2808" disabled="disabled">
+                    <i class="ri-pause-fill"></i>
+                    Pause
+                </button>
             </div>
             <div class="volume-control">
-                <span class="volume-icon">🔊</span>
+                <span class="volume-icon"><i class="ri-volume-up-fill"></i></span>
                 <input type="range" id="volumeControl" min="0" max="100" value="100" />
                 <span id="volumeValue">100%</span>
             </div>
         </div>
         <audio id="hgf120f3-047d-44d4-a1df-8bdb6f99298d" preload="auto"></audio>
-        <ul id="cc3d4209-3deb-4ad4-b451-95cf291146aa"></ul>
+        <ul id="cc3d4209-3deb-4ad4-b451-95cf291146aa" style="margin: 0; padding: 0;"></ul>
     </div>
     <div id="credits">
         <p>Hosted by <a href="https://github.com/libsic" target="_blank" rel="noopener noreferrer">libsic production</a> and jlcraftsman &copy; All rights reserved 2024</p>

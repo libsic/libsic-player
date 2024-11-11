@@ -19,6 +19,7 @@ body:has(.dbba2ddf-664f-49d8-8228-34818bd43a9e) > .dbba2ddf-664f-49d8-8228-34818
 body:has(#cc3d4209-3deb-4ad4-b451-95cf291146aa) > #cc3d4209-3deb-4ad4-b451-95cf291146aa {
     list-style: none;
     padding: 0;
+    margin: 0;
     margin-top: 20px;
 }
 
